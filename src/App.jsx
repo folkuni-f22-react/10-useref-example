@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import './App.css'
+import MyForm from './components/MyForm.jsx'
 
 function App() {
-	const [count, setCount] = useState(0)
+	const [showForm, setShowForm] = useState(false)
 
 	return (
 		<div>
-			Hello
+			<h1> useRef-exempel </h1>
+
+			<button onClick={() => setShowForm(!showForm)}> Toggla form </button>
+			{showForm && <MyForm />}
 		</div>
 	)
 }
